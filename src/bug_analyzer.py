@@ -1,7 +1,8 @@
 """
-Reads every saved transcript in recordings/ and asks Claude to flag likely
-bugs in the clinic agent's behavior, following the same format the challenge
-doc's example bug report uses (Bug / Severity / Call / Details).
+Reads every saved transcript in recordings/ and asks an LLM (via the OpenAI
+API) to flag likely bugs in the clinic agent's behavior, following the same
+format the challenge doc's example bug report uses (Bug / Severity / Call /
+Details).
 
 This is a first pass, not a replacement for actually listening to the calls.
 Treat its output as a draft: skim the audio for anything it flags as
@@ -14,7 +15,7 @@ Usage:
 import json
 from pathlib import Path
 
-import anthropic
+from openai import OpenAI
 
 from src.config import load_settings
 
@@ -58,12 +59,11 @@ def load_transcripts() -> list[tuple[str, dict]]:
     return results
 
 
-def analyze_transcript(client: anthropic.Anthropic, scenario_id: str, conversation: dict) -> list[dict]:
+def analyze_transcript(client: OpenAI, scenario_id: str, conversation: dict) -> list[dict]:
     transcript_text = json.dumps(conversation.get("transcript", []), indent=2)
 
-    response = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=2000,
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
             {
                 "role": "user",
@@ -72,7 +72,7 @@ def analyze_transcript(client: anthropic.Anthropic, scenario_id: str, conversati
         ],
     )
 
-    raw_text = "".join(block.text for block in response.content if hasattr(block, "text"))
+    raw_text = response.choices[0].message.content or ""
     raw_text = raw_text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
 
     try:
@@ -103,7 +103,7 @@ def write_report(all_bugs: list[tuple[str, dict]]) -> None:
 
 def main() -> None:
     settings = load_settings()
-    client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+    client = OpenAI(api_key=settings.openai_api_key)
 
     transcripts = load_transcripts()
     if not transcripts:

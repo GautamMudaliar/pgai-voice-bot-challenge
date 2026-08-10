@@ -22,7 +22,7 @@ class Settings:
     elevenlabs_api_key: str
     elevenlabs_agent_id: str
     elevenlabs_agent_phone_number_id: str
-    anthropic_api_key: str
+    openai_api_key: str
     caller_number: str  # the single number we use for all outbound test calls
     poll_interval_seconds: int = 5
     poll_timeout_seconds: int = 300
@@ -41,7 +41,7 @@ def load_settings() -> Settings:
         elevenlabs_api_key=require("ELEVENLABS_API_KEY"),
         elevenlabs_agent_id=require("ELEVENLABS_AGENT_ID"),
         elevenlabs_agent_phone_number_id=require("ELEVENLABS_AGENT_PHONE_NUMBER_ID"),
-        anthropic_api_key=require("ANTHROPIC_API_KEY"),
+        openai_api_key=require("OPENAI_API_KEY"),
         caller_number=require("CALLER_NUMBER"),
     )
 
