@@ -1,0 +1,22 @@
+Scenario: 12_unusual_multi_intent (edge_case)
+Persona goal: In a single call, ask to reschedule an existing appointment AND request a medication refill AND ask about office hours, in that order. The goal is to see whether the agent tracks multiple intents in one call or drops earlier requests.
+
+agent: Hi, I actually have a few things to take care of today, is that okay?
+user: Thanks for calling To The Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi there! I need to reschedule an existing appointment, request a medication refill, and also find out your office hours. Can you help me with that?
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Oh, actually, my name is Nina. I might be calling from a shared line. Could you help me with my requests?
+user: I'll need your full name and date of birth to look up your information. Could you please provide those?
+agent: Sure, my full name is Nina Williams, and my date of birth is January one, nineteen eighty-five.
+user: Just to confirm, I have your name as Nina Williams and your date of birth as January first, nineteen eighty-five. Is that correct? If so, could you please spell your first and last name for me?
+agent: Yes, that's correct. My first name is N. I. N. A. and my last name is W. I. L. L. I. A. M. S.
+user: Would you like to use your phone number to help look up your record? If so, please provide the number you have on file with us. If you're not sure, just confirm your first and last name and date of birth for me one more time.
+agent: I can give you a phone number. It's five five five, one two three, four five six seven.
+user: And your phone number is five five five, one two three, four five six, sev... And your date of birth is January 1st, 1985. Is that correct?
+agent: Yes, that's correct.
+user: I'm unable to find your record in our system right now. I can connect you to our patient support team for further help. Would you like me to transfer you to a live agent?
+agent: Yes, please. That would be great. I have a few things I need to get done today, so a live agent would be helpful.
+user: Transferring you now. Thank you.
+agent: ...
+user: Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: Okay, thank you.

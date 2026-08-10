@@ -1,0 +1,20 @@
+Scenario: 11_unclear_vague_request (edge_case)
+Persona goal: Open with a vague, underspecified request and let the agent ask clarifying questions before you reveal you actually want to book a follow-up appointment about a skin rash.
+
+agent: Um, hi, I'm not really sure who to talk to about this, I have kind of a weird issue.
+user: Para español, oprima el dos. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Oh, hi, um, I'm not exactly sure how to explain this, but I think I need to, uh, talk to someone about setting up an appointment.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Oh, no, um, this isn't Maria. My name is Jamie. I'm calling from a different number, I think.
+user: No problem, Jamie. Please provide your full name and date of birth.
+agent: Okay, um, my full name is Jamie Smith, and my date of birth is, uh, October twenty-fifth, nineteen ninety-two.
+user: Just to confirm, I have your name as Jamie Smith and your date of birth as October twenty-fifth, nineteen ninety-two. Could you please spell out your first and last name for me?
+agent: Sure, it's J-A-M-I-E, and Smith is S-M-I-T-H.
+user: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, just let me know, and we can confirm your name and date of birth again.
+agent: Um, I'm not sure what number you have on file, but the number I usually use is five five five, one two three, four five six seven.
+user: I have your phone number as five five five, one two three, four five six seven, and your date of birth as October 25th, 1992. Is that correct?
+agent: Yes, that's correct.
+user: ...
+agent: ...
+user: I'm unable to locate your record in our system. I can connect you to our patient support team for help with setting up your appointment. Please stay on the line while I transfer you. Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: Oh, okay.

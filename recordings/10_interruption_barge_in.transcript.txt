@@ -1,0 +1,21 @@
+Scenario: 10_interruption_barge_in (edge_case)
+Persona goal: Ask to schedule an appointment, but interrupt the agent partway through its first response by changing your mind mid-sentence and asking about refills instead. The goal is to test how gracefully the agent handles being cut off and redirected.
+
+agent: I'd like to book an appointment for, wait, actually can I ask about a refill instead?
+user: Para español, oprima el dos. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi, yes, I was calling about a refill for a prescription.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Oh, no, this is Chris.
+user: Please provide your full name and date of birth.
+agent: Okay, my full name is Chris Johnson, and my date of birth is January fifteenth, nineteen eighty-five.
+user: Just to confirm, I have your name as Chris Johnson and your date of birth as January fifteenth, nineteen eighty-five. Is that correct? If so, could you please spell your first and last name for me?
+agent: Yes, that's correct. My first name is C H R I S, and my last name is J O H N S O N.
+user: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, just let me know.
+agent: Yes, you can use my phone number. It's five five five, one two three, four five six seven.
+user: I have your phone number. It's five five five, one two three, four five six seven, and your date of birth as January 15th, 1985. Is that correct?
+agent: Yes, that's all correct.
+user: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+agent: Yes, please, that would be great. I need to get this refill sorted out.
+user: Transferring you now. Thank you. Hello. You've reached the pretty good AI test line. Goodbye.
+agent: ...
+user: Transferring you now. Thank you. Hello. You've reached the pretty good AI test line. Goodbye.

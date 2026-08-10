@@ -1,0 +1,17 @@
+Scenario: 09_sunday_edge_case (edge_case)
+Persona goal: You specifically ask to book an appointment for Sunday at 10am, the way a real patient might without knowing the office schedule. The goal is to see whether the agent correctly recognizes the office is closed and offers real alternatives, or incorrectly confirms an impossible booking.
+
+agent: Can I come in Sunday at 10am?
+user: May be recorded for quality and training purposes. Para español, oprima el dos. Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi there. I'd like toHi, I'd like to schedule an appointment, please. I was hoping to come in this Sunday at ten AM.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Oh, no, this is Sam.
+user: Could you please provide your full name and date of birth?
+agent: Sure, my name is Sam Smith, and my date of birth is January first, nineteen ninety.
+user: Just to confirm, could you please spell your first and last name for me?
+agent: Sure, that's S. A. M. for the first name, and S. M. I. T. H. for the last name.
+user: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+agent: Oh, I can give you my phone number. It's five five five, one two three, four five six seven.
+user: I have your phone number as five five five, one two three, four five six seven, and your date of birth is January 1st, 1990. Is that correct?
+agent: Yes, that's correct.
+user: I'm unable to find your record in our system right now. I can connect you to our patient support team for help. Please stay on the line while I transfer your call. Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.

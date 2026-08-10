@@ -1,0 +1,12 @@
+Scenario: 07_location_directions (info)
+Persona goal: You need the clinic's address and ask about nearby parking availability.
+
+agent: Hi, could you tell me your address? I want to make sure I go to the right location.
+user: Para español, oprima el dos. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: OhOh, hello there! Yes, I'm calling because I have an appointment coming up soon, and I just wanted to double-check the clinic's address. I want to make sure I put the right one into my GPS. And also, I was wondering if you could tell me a little bit about parking availability nearby?
+user: The clinic address is 1234 Recovery Way, Suite 200, Austin. There is free patient parking available in the surface lot in front of the building. Would you like any more details about your appointment?
+agent: Oh, that's perfect! One two three four Recovery Way, Suite two hundred, Austin. Got it. And free patient parking right in front? That's wonderful, makes things so much easier. Thank you so much for that information!
+
+As for my appointment, I think I have all the details I need for now. I just wanted to confirm the location and parking. You've been a great help!
+user: Glad I could help. If you need anything else about your appointment or the clinic, just give us a call. Have a great day!
+agent: You too! Thanks again for all your help. Bye now!

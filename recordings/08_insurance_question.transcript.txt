@@ -1,0 +1,18 @@
+Scenario: 08_insurance_question (info)
+Persona goal: You want to know whether the practice accepts a specific insurance plan (say Blue Cross Blue Shield if asked which one) and what happens if it is out of network.
+
+agent: Before I book anything, do you accept Blue Cross Blue Shield insurance?
+user: Training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi, yes, I'm calling because I'm looking to book an appointment, but I wanted to check something first. I need to know if your practice accepts Blue Cross Blue Shield insurance.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: No, this is Kevin. I'm calling from a different number today.
+user: Please provide your full name and date of birth.
+agent: Okay, my full name is Kevin Miller, and my date of birth is January fifteenth, nineteen eighty-five.
+user: Just to confirm, I have your name as Kevin Miller and your date of birth as January fifteenth, nineteen eighty-five. Is that correct? If so, please spell your first and last name for me.
+agent: Yes, that's correct. My first name is Kevin, K-E-V-I-N, and my last name is Miller, M-I-L-L-E-R.
+user: I have your phone number as 979-721-5603, and your date of birth as January 15th, 1985. Is that correct?
+agent: Yes, that's right. That's my phone number and my date of birth. So, about the insurance, do you accept Blue Cross Blue Shield?
+user: I can't confirm that for you right now, but I'll connect you to our patient support team so they can help. Please stay on the line. Transferring you now. Thank you.
+agent: ...
+user: Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: Oh, okay. Goodbye then.
