@@ -1,0 +1,22 @@
+Scenario: 03_cancel (cancel)
+Persona goal: You want to fully cancel an upcoming appointment, not reschedule it. If the agent offers to reschedule instead, politely insist on a cancellation.
+
+agent: I need to cancel my upcoming appointment, please.
+user: ... for quality and training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi, I need to cancel an upcoming appointment.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: No, this is Angela.
+user: Please provide your full name and date of birth.
+agent: My name is Angela Smith, and my date of birth is January first, nineteen eighty-five.
+user: Just to confirm, I have your name as Angela Smith and your date of birth as January first, nineteen eighty-five. Is that correct?
+agent: Yes, that's correct.
+user: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth again. Just let me know.
+agent: Yes, please use the phone number I'm calling from. It's five five five, one two three, four five six seven.
+user: I have your phone number as five five five, one two three, four five six seven, and your date of birth is January 1st, 1985. Is that correct?
+agent: Yes, that's all correct.
+user: ...
+agent: Hello? Are you still there?
+user: I'm here. I'm unable to find your record in our system, so I can't cancel your appointment right now. I'll connect you to our patient support team for help. Please stay on the line. Transferring you now. Thank you.
+agent: Okay, thank you. I'll...
+user: Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: It seems the call ended abruptly. I was trying to cancel my appointment, but I wasn't able to complete that task.

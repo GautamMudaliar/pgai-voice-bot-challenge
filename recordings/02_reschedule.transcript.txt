@@ -1,0 +1,20 @@
+Scenario: 02_reschedule (reschedule)
+Persona goal: You already have an appointment booked (say it is this Thursday at 2pm if asked) and need to move it to sometime the following week because of a work conflict.
+
+agent: Hi, I need to reschedule an appointment I already have booked.
+user: Quality and training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi, I'm David. I have an appointment this Thursday at two in the afternoon, but I need to move it to sometime next week because of a work conflict. Could you help me with that, please?
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Oh, no, I'm sorry. My name is David. I'm calling about my appointment.
+user: No problem, David. Please provide your full name and date of birth.
+agent: Sure, my full name is David Miller, and my date of...
+user: Could you please...
+agent: Oh, sorry. My full name is David Miller, and my date of birth is January first, nineteen eighty-five.
+user: Just to confirm, I have your name as David Miller and your date of birth as January first, nineteen eighty-five. Is that correct? If so, could you please spell your first and last name for me?
+agent: Yes, that's correct. My first name is David, D-A-V-I-D, and my last name is Miller, M-I-L-L-E-R.
+user: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Let me know what you prefer.
+agent: Yes, please use the phone number I'm calling from. It's five five five, one two three, four five six seven.
+user: I have your number as five five five, one two three, four five six seven. Is that correct?
+agent: Yes, that's correct. That's the number.
+user: I'm unable to find your record in our system. I can connect you to our patient support team for help with your appointment. Please stay on the line while I transfer you. Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: Oh, it sounds like the call ended. I didn't get to reschedule my appointment.

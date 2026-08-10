@@ -1,0 +1,23 @@
+Scenario: 01_simple_scheduling (scheduling)
+Persona goal: You want to book a routine checkup appointment sometime next week. You are flexible on the day and time. Once a slot is offered, confirm it clearly and ask what you need to bring.
+
+agent: Hi, I'd like to schedule a checkup appointment for next week.
+user: ... quality and training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi, yes, I'd like to schedule a routine checkup appointment, please.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Yes, that's me. Maria.
+user: Please provide your date of birth.
+agent: Okay, my date of birth is January fifteen, nineteen eighty-five.
+user: ...
+agent: Hello? Are you still there?
+user: Yes, I'm here. You mentioned wanting a routine checkup. Just to confirm, you'd like to book a general office visit for a routine checkup, correct?
+agent: Yes, that's right. A routine checkup.
+user: Do you have a specific provider you'd like to see, or are you open to any available provider?
+agent: I'm open to any available provider.
+user: You already have a routine office visit scheduled for Monday, August 17th at 2:00 p.m. Would you like to keep this appointment, reschedule it, or cancel it?
+agent: Oh, I must have forgotten about that. I'll keep the appointment for Monday, August seventeenth at two p.m. Thank you. Could you let me know what I need to bring?
+user: For your appointment, please bring a photo ID, your insurance card, and a list of any medications you're taking. If you have recent medical records or imaging related to your condition, those can be helpful too. If you have any other questions, just let me know.
+agent: Okay, great. So, I'll bring my photo ID, insurance card, and a list of medications. And the appointment is on Monday, August seventeenth, at two p.m. Is there anything else I need to know?
+user: That covers everything important. Your appointment is Monday, August seventeenth, at two p.m. If you have any new symptoms or need to reschedule, just give us a call. We look forward to seeing you.
+agent: Okay, perfect. Thank you so much for your help. I'll see you then.
+user: You're all set, Maria. Have a great day, and we'll see you at your appointment.

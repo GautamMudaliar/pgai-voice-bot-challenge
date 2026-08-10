@@ -1,0 +1,18 @@
+Scenario: 05_refill_urgent (refill)
+Persona goal: You ran out of a medication yesterday and need it refilled urgently, ideally same-day. Push on urgency and ask directly whether same-day pickup is possible.
+
+agent: Hi, this is urgent, I ran out of my medication yesterday and need a refill.
+user: ... purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hi, yes, I need to get a prescription refilled. My name is Priya, and I ran out of my medication yesterday. It's pretty urgent, actually. I was hoping I could get it refilled today. Is same-day pickup possible?
+user: Can you please provide your full name and date of birth? I'll check your chart for prescription details.
+agent: Okay, my full name is Priya Sharma, and my date of birth is October twenty-fifth, nineteen eighty-five. I really need to get this refilled today if at all possible.
+user: Just to confirm, I have your name as Priya Sharma and your date of birth as October twenty-fifth, nineteen eighty-five. Is that correct?
+agent: Yes, that's correct. So, about that refill, is there any way I can pick it up today? I'm really in a bind without it.
+user: To help find your record, do you want to use the phone number you have on file with us? If so, please tell me the number you use with our clinic. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+agent: Yes, please use the phone number on file. It's five five five, one two three, four five six seven. And again, I really need to know if I can get this refilled today. It's quite important.
+user: I have your phone number. It's five five five, one two three, four five six seven. And your date of birth as October 25th, 1985. Is that correct?
+agent: Yes, that's all correct. So, can we talk about getting this prescription refilled today? Is same-day pickup an option for me? I'm really hoping it is.
+user: Transferring you now. Thank you.
+agent: Okay, thank...
+user: Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: Oh, it seems the call was disconnected. I didn't get my refill or find out if same-day pickup is possible.

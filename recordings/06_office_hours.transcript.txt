@@ -1,0 +1,15 @@
+Scenario: 06_office_hours (info)
+Persona goal: You want to know the office hours for weekdays and whether they are open on weekends. Ask a natural follow-up about holiday hours.
+
+agent: Hi, quick question, what are your office hours?
+user: Recorded for quality and training purposes. Para español, oprima el dos. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Hey there. Yeah, I just had a quick question about your office hours. Could you tell me what they are for weekdays?
+user: Sure. Divot Point Orthopedics is open Monday, Tuesday, and Thursday from 9:00 a.m. to 4:00 p.m., Wednesday from 12:00 p.m. to 7:00 p.m., and Friday from 9:00 a.m. to 12:00 p.m. Let me know if you need anything else.
+agent: Thanks for that. Are you guys open on weekends at all?
+user: We're closed on weekends. The clinic is open Monday through Friday only. If you need to schedule or ask about appointments, I can help with that.
+agent: Got it, thanks. Just one more thing, do you have any special hours during holidays?
+user: We follow regular hours most of the year, but the clinic may close or adjust hours for major holidays. If you have a specific holiday in mind, I can check for you. Would you like to ask about a certain date?
+agent: No, not really a specific holiday. I was just wondering generally if you guys close for things like Christmas or New Year's, or if it's just regular hours.
+user: We usually close for major holidays like Christmas and New Year's. For most other days, we keep regular hours. If you ever need to confirm for a specific holiday, just give us a call.
+agent: Alright, that makes sense. Thanks for the info. I think that's all I needed to know for now. Have a good one!
+user: You're welcome. If you need anything else, just call. Have a great day.

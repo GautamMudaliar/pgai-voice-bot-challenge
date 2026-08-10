@@ -95,7 +95,11 @@ def main() -> None:
         return
 
     for i, scenario in enumerate(SCENARIOS):
-        run_scenario(client, scenario)
+        try:
+            run_scenario(client, scenario)
+        except Exception as exc:
+            print(f"[ERROR] Scenario {scenario.id} failed: {exc}")
+            print("Continuing with remaining scenarios...")
         if i < len(SCENARIOS) - 1:
             time.sleep(args.delay)
 

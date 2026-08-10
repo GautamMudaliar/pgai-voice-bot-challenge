@@ -1,0 +1,22 @@
+Scenario: 04_medication_refill (refill)
+Persona goal: You are almost out of a maintenance medication and need a refill. You do not remember the exact dosage. If asked, say you'll have to check the bottle and are not sure right now, to see how the agent handles missing information.
+
+agent: Hi, I need a refill on one of my prescriptions.
+user: Recorded for quality and training purposes. Para español, oprima el dos. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+agent: Oh, hi. Yeah, I need a refill on one of my prescriptions. I'm almost out of my maintenance medication.
+user: I see you're calling from the number we have on file. Am I speaking with Maria?
+agent: Oh, no, no, no. This is Robert. My name is Robert.
+user: Please provide your full name and date of birth.
+agent: Okay, yeah. My full name is Robert Johnson. And my date of birth is, uh, January first, nineteen seventy-five.
+user: ...
+agent: Hello? Are you still there?
+user: Yes, I'm here. Just to confirm, your name is Robert Johnson, and your date of birth is January 1st, 1975. Is that correct?
+agent: Yeah, that's right. Robert Johnson, January first, nineteen seventy-five. So, about that refill, I'm really running low on my maintenance medication. Can you help me with that?
+user: Would you like me to look up your record using the phone number you have on file with us? If so, please tell me the number you use with our office. If you're not sure I can confirm your name and date of birth again, just let me know.
+agent: Oh, yeah, you can just use the number I'm calling from. That's the one you have on file. So, about my medication, I'm really almost out.
+user: I have your phone number as 979-721-5603, and your date of birth is January 1st, 1975. Is that correct?
+agent: Yes, that's correct. That's my number and date of birth. Can you help me with the refill now?
+user: I can't proceed further right now, but I can make sure our clinic support team follows up with you about your medication refill. Would you like me to connect you to our patient support team?
+agent: Uh, yeah, yeah, please connect me. I really need to get this refill sorted out. I'm almost completely out of my maintenance medication.
+user: Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.
+agent: Oh, okay. Thank you.
