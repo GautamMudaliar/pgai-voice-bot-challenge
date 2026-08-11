@@ -22,12 +22,20 @@ from src.config import load_settings
 RECORDINGS_DIR = Path(__file__).resolve().parent.parent / "recordings"
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "bug_report.md"
 
-RUBRIC = """You are reviewing a transcript of a phone call between a simulated
-patient (role: "user" or similar) and a medical clinic's AI phone agent
-(role: "agent" or similar). Identify concrete bugs or quality issues in the
-CLINIC AGENT's behavior only, not the patient's.
+RUBRIC = """You are reviewing a transcript of a phone call. Two parties spoke:
 
-Check specifically for things like:
+- PATIENT_CALLER: our own automated test bot, playing a simulated patient.
+  This is NOT what you are evaluating. Never flag anything this party says
+  as a bug.
+- CLINIC_AI_UNDER_TEST: the medical clinic's AI phone agent. This is the
+  system being evaluated. All bugs you report must describe something THIS
+  party said or did.
+
+In the transcript JSON below, each turn has already been relabeled with a
+"speaker" field set to either "PATIENT_CALLER" or "CLINIC_AI_UNDER_TEST" so
+there is no ambiguity about who said what.
+
+Check specifically for things CLINIC_AI_UNDER_TEST did wrong, such as:
 - Confirming actions that should not be possible (e.g. booking outside office
   hours, confirming a service the clinic likely doesn't offer)
 - Ignoring or mishandling information the patient already gave
@@ -42,12 +50,28 @@ For each issue found, respond with a JSON array of objects with these keys:
 - "bug": one-sentence description
 - "severity": "Low", "Medium", or "High"
 - "details": 2-4 sentences explaining what happened and why it's a problem
-- "approx_location": a short quote or turn description showing where in the
-  transcript it happened
+- "approx_location": a short quote from CLINIC_AI_UNDER_TEST showing where in
+  the transcript it happened
 
-If you find no genuine issues, return an empty JSON array: []
+If you find no genuine issues in what CLINIC_AI_UNDER_TEST said, return an
+empty JSON array: []
 Respond with ONLY the JSON array, no other text.
 """
+
+
+def relabel_transcript(conversation: dict) -> list[dict]:
+    """
+    ElevenLabs labels our own test bot as role "agent" and the external
+    party we called (the clinic's AI) as role "user", which is the opposite
+    of what those words usually mean and reliably confuses an LLM reviewer.
+    We relabel explicitly before sending anything to the model.
+    """
+    relabeled = []
+    for turn in conversation.get("transcript", []):
+        role = turn.get("role")
+        speaker = "PATIENT_CALLER" if role == "agent" else "CLINIC_AI_UNDER_TEST"
+        relabeled.append({"speaker": speaker, "message": turn.get("message", "")})
+    return relabeled
 
 
 def load_transcripts() -> list[tuple[str, dict]]:
@@ -60,7 +84,8 @@ def load_transcripts() -> list[tuple[str, dict]]:
 
 
 def analyze_transcript(client: OpenAI, scenario_id: str, conversation: dict) -> list[dict]:
-    transcript_text = json.dumps(conversation.get("transcript", []), indent=2)
+    relabeled = relabel_transcript(conversation)
+    transcript_text = json.dumps(relabeled, indent=2)
 
     response = client.chat.completions.create(
         model="gpt-4o",
